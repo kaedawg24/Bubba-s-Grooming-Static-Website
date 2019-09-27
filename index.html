@@ -1,0 +1,133 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Bubba's Grooming</title>
+    <meta name="Description" content="Pet store that allows owners to learn how to groom their animals on their own." />
+    <!--External Stylesheet-->
+    <link href="Styles/css/CustomBubba'sGrooming.css" rel="stylesheet" />
+</head>
+<body>
+    <header id="bubbasgrooming">
+        <h1 id="title"><i class="fa fa-paw"></i>Bubba's Grooming</h1>
+        <h2 id="groom">Learn how to groom your pet today!</h2>
+
+        <nav class="navbar-default navbar-fixed-top">
+
+            <!--Hamburger Button-->
+            <a href="javascript: void(0)" class="pull-right" onclick="toggleNav()" id="menu-btn">
+                &#9776;
+            </a>
+            <!--Above we applied javascript:void(0) to keep the page from refreshing but also keeping the user on the same page.
+
+            &#9776: gives you the hamburger menu button-->
+
+
+            <ul class="topnav" id="nav-list">
+                <li>
+                    <a href="index.html">
+                        <span class="glyphicon glyphicon-home"></span> Home
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="classes.html">
+                        Classes
+                    </a>
+                </li>
+                <li>
+                    <a href="team.html">
+                        Team Members
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        BorgField Hospital
+                    </a>
+                </li>
+                <!--Navbar Dropdown-->
+                <div class="dropdown">
+                    <button class="dropbtn">Services</button>
+                    <div class="dropdown-content">
+                        <a href="#">Daycare</a>
+                        <a href="#">Training</a>
+                    </div>
+                </div>
+                <!--/Navbar dropdown-->
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="mainwrapper">
+            <article>
+                <!--make picture a sibling to article so it is nested in paragraph-->
+                <h2>About us</h2>
+                <p>
+                    We offer dog and cat grooming services while also teaching owners how to properly groom their pets at home. Our prices vary per class where they are based on their ranking. If you choose to go straight to Intermediate or Advanced classes, the fee will double. However, if you choose to start at the beginnner classes, then the classes pricing is shown at the standard rate.
+                </p>
+            </article>
+            <article>
+                <h2>Breeds that we accept:</h2>
+                <p>
+                    American water spaniel bedlington terrier belgian tervuren boerboel boxer bull terrier eurasier giant schnauzer ibizan hound norfolk terrier norrbottenspets portuguese water dog pug puli rottweiler russian toy sealyham terrier shih tzu spanish water dog tibetan spaniel whippet. Alaskan malamute appenzeller sennenhunde australian shepherd beauceron boston terrier bullmastiff cardigan welsh corgi entlebucher mountain dog german longhaired pointer golden retriever irish setter kishu ken pembroke welsh corgi pomeranian portuguese podengo russian toy saluki scottish terrier silky terrier spanish mastiff spanish water dog standard schnauzer swedish lapphund vizsla.
+                </p>
+                <p>
+                    Black and tan coonhound boykin spaniel cane corso curly-coated retriever french spaniel gordon setter grand basset griffon vendeen lagotto romagnolo pekingese siberian husky smooth fox terrier swedish vallhund wirehaired vizsla. Australian terrier bedlington terrier belgian tervuren bloodhound border terrier boxer bullmastiff chinook curly-coated retriever dachshund dutch shepherd german shepherd dog hamiltonstovare irish water spaniel kishu ken otterhound rafeiro do alentejo st. bernard swedish vallhund vizsla west highland white terrier wire fox terrier.
+                </p>
+                <p>
+                    Azawakh belgian malinois bergamasco black and tan coonhound brussels griffon cirneco dell'etna curly-coated retriever doberman pinscher english cocker spaniel french spaniel german wirehaired pointer glen of imaal terrier hovawart miniature schnauzer norwegian buhund petit basset griffon vendeen plott pug pumi rottweiler samoyed slovensky cuvac soft coated wheaten terrier spinone italiano standard schnauzer thai ridgeback tibetan mastiff wirehaired vizsla.
+                </p>
+                <p>
+                    YEP YOU JUST READ THROUGH ALL OF THAT! WE ACCEPT EVERY DOG AND CAT BREED POSSIBLE!
+                </p>
+            </article>
+        </section>
+        <section>
+            <article id="imageGallery">
+                <div class="galleryItem">
+                    <a href="Styles/Images/photo-1554245471-0dbe45bebbd2.jfif" target="_blank"></a>
+                    <img src="Styles/Images/photo-1554245471-0dbe45bebbd2.jfif" alt="A black and white dog standing on the side of a tub with roses in her hair." title="Dog" height="900" width="400" />
+                </div>
+                <div class="galleryItem">
+                    <a href="Styles/Images/photo-1543852786-1cf6624b9987.jfif" target="_blank"></a>
+                    <img src="Styles/Images/photo-1543852786-1cf6624b9987.jfif" alt="A tabby cat with a bandana around their neck meowing at the camera." title="Cat" height="900" width="400" />
+                </div>
+                <div class="galleryItem">
+                    <a href="Styles/Images/karly-jones.jpg" target="_blank"></a>
+                    <img src="Styles/Images/karly-jones.jpg" alt="A brown and white cat curling their face into a fur pillow." title="Cat" height="900" width="400" />
+                </div>
+                <div class="galleryItem">
+
+                    <a href="Styles/Images/photo-1536239742832-f20229b8ae75.jfif" target="_blank"></a>
+                    <img src="Styles/Images/photo-1536239742832-f20229b8ae75.jfif" alt="A black and white husky running in a forest towards the camera." title="Dog" height="900" width="400" />
+                </div>
+            </article>
+        </section>
+    </main>
+    <footer>
+        &copy;Copyright 2019 Kaeleigh Warrick-Hansen
+    </footer>
+    <!--Toggle Hamburger Menu-->
+    <script>
+        //We are now in JS mode, within the script tags
+        function toggleNav() {
+            let navList = document.getElementById('nav-list');
+            navList.classList.toggle('expanded');
+
+            //Toggle Hamburger Menu/Close button
+            let btnMenu = document.getElementById('menu-btn');
+            if (navList.classList.contains('expanded')) {
+                btnMenu.innerHTML = "&times;";
+            }
+            else {
+                btnMenu.innerHTML = "&#9776;";
+            }
+        }
+    </script>
+</body>
+</html>

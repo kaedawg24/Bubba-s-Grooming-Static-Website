@@ -1,0 +1,382 @@
+﻿
+@import url('https://fonts.googleapis.com/css?family=Chilanka|Josefin+Sans&display=swap');
+
+body {
+}
+#title {
+    font-size: 32px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+header {
+    background-color: paleturquoise;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 10px;
+    margin-top: -8px;
+    margin-left: -8px;
+    margin-right: -8px;
+}
+    header h2 {
+        font-family: 'Chilanka', cursive;
+        font-size: 1.1em;
+    }
+
+main h1 {
+    background-color: #A6F8FF;
+    color: darkblue;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+main h2 {
+    background-color: #A6F8FF;
+    color: darkblue;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.25em;
+}
+main p {
+    font-family: 'Chilanka', cursive;
+    font-size: 1.1em;
+}
+
+h1 {
+    font-size: 28px;
+    color: darkblue;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+h2 {
+    text-decoration: underline;
+    font-size: 20px;
+    color: darkblue;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1.25em;
+}
+
+h3 {
+    background-color: #F7B1FF;
+    font-size: 16px;
+    color: darkblue;
+    font-style: italic;
+    font-family: 'Josefin Sans', sans-serif;
+    display:inline;
+}
+
+header h1 {
+    color: darkblue;
+}
+
+footer {
+    font-style: italic;
+    font-weight: bold;
+    color: black;
+}
+    /******************
+    LINKS
+*******************/
+    /*Vertical link blocks*/
+
+
+ul.blocklist{
+ background-color: teal;
+    padding: 0;
+}
+
+ul.blocklist li {
+    list-style-type: none;
+    list-style-image: none;
+}
+
+ul.blocklist a {
+    color: aqua;
+    text-align: center;
+    padding: .5em;
+    display: block;
+    /*Display: block makes the entire horizontal area clickable, not just the text*/
+}
+
+    ul.blocklist a:hover {
+        background-color: darkblue;
+        color: lightblue;
+    }
+/*base link (all links)*/
+a {
+    color: teal;
+    font-weight: bold;
+    text-decoration: none; /*This removed the default browser styling of underline*/
+}
+    /*base link pseudo selectors*/
+    /*hover = mouse over the element
+    active = actively clicking on the element
+    focus = having clicked on the element and it currently being selected
+*/
+
+    a:hover, a:active, a:focus {
+        color: lightblue;
+        text-decoration: underline;
+        background-color: darkblue;
+    }
+
+/*Nav link styling*/
+nav a {
+    font-weight: bold;
+    color: dodgerblue;
+}
+
+    nav a:hover, nav a:active, nav a:focus {
+        text-decoration: none;
+    }
+
+nav ul {
+    background-color: white;
+    padding: 0;
+    border-top: 2px dashed darkgray;
+    border-bottom: 2px dashed darkgray;
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 1em;
+}
+
+nav li:hover {
+    background-color: darkblue;
+}
+
+/*nav link structure - make nav links horizontal*/
+nav ul li {
+    display: inline-block;
+}
+
+    nav ul li a {
+        padding: .4em 1em;
+        display: block;
+    }
+
+/*Topics list - HTML.html*/
+.asideList {
+    list-style: none;
+}
+
+
+
+
+/*COLORS*/
+#bubbasgrooming {
+    background-image: radial-gradient(circle farthest-side at 50% 60%,#B0FCFF,#63FAFF,#6A807D);
+}
+
+
+
+#groom{
+    letter-spacing: .2em;
+}
+
+
+.mainwrapper{
+    width: 50%;
+    text-align: center;
+    margin-left:25%;
+}
+
+
+/*IMAGES*/
+div.galleryItem {
+    margin: 5px;
+    border: 1px solid #ccc;
+    display: inline-block;
+    width: 350px;
+}
+
+    div.galleryItem:hover {
+        border: 1px solid aqua;
+    }
+
+    div.galleryItem img {
+        width: 100%;
+        height: auto;
+    }
+
+    div.galleryItem a:hover {
+        background-color: aqua;
+    }
+
+#imageGallery {
+    margin: 0 auto;
+    width: 50%;
+    text-align: left;
+}
+
+
+/*************************
+    Hamburger Menu
+**************************/
+nav a.pull-right {
+    font-weight: bold;
+    color: #FFF;
+    padding: 10px;
+    text-decoration: none;
+    font-size: 1.5em;
+    display: none;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    /*Display none keeps the item from being shown*/
+}
+
+.pull-right {
+    float: right !important;
+}
+
+@media screen and (max-width: 850px) {
+    nav ul#nav-list {
+        display: none;
+    }
+
+    nav a.pull-right {
+        display: inline-block;
+    }
+    /*
+        .expanded is added to #nav-list when the hamburger button is clicked.
+
+        This CSS will 'expand' the menu
+    */
+    nav ul#nav-list.expanded {
+        float: none;
+        clear: both;
+        display: block;
+    }
+
+        nav ul#nav-list.expanded li {
+            display: block;
+        }
+
+            nav ul#nav-list.expanded li a {
+                display: block;
+                text-align: center;
+                font-size: 1em;
+            }
+
+    nav li.dropdown ul.dropdown-menu {
+        width: 50%;
+        float: none;
+        margin: auto;
+        position: static;
+    }
+}
+
+
+/*************************
+    Side Navigation
+**************************/
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1030;
+    top: 0;
+    left: 0;
+    background-color: rgba(0,0,0,.9);
+    overflow-x: hidden;
+    padding-top: 100px;
+    transition: .5s;
+}
+
+    .sidenav a {
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #818181;
+        display: block;
+        transition: .3s;
+    }
+
+        .sidenav a:hover {
+            color: #f1f1f1;
+        }
+
+.close-btn {
+    position: absolute;
+    top: 50px;
+    right: 25px;
+    font-size: 30px !important;
+    margin-left: 50px;
+}
+
+.button {
+    font-family: sans-serif;
+    background: rgba(0,0,0,.5);
+    height: 100%;
+    width: 20px;
+    z-index: 1030;
+    position: fixed;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+}
+
+.vertical-text {
+    position: absolute;
+    top: 45%;
+    left: 0%;
+    writing-mode: vertical-lr;
+    color: #fff;
+    font-weight: bold;
+}
+
+a.navbar-brand {
+    margin-left: 40px;
+}
+
+
+
+/* Dropdown Button */
+.dropbtn {
+    background-color: white;
+    color: dodgerblue;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight:bold;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    font-family: 'Josefin Sans', sans-serif;
+    color: dodgerblue;
+    font-weight:bold;
+}
+
+    /* Links inside the dropdown */
+    .dropdown-content a {
+        color: dodgerblue;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        font-weight:bold;
+    }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #87FAFF;
+        }
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: darkblue;
+}

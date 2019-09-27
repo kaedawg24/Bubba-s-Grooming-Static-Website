@@ -1,0 +1,120 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Contact Us!</title>
+    <meta name="description" content="Here is our contact information! Follow our Twitter and LinkedIn accounts below! Please feel free to call or email us with any concerns. We hope to see you soon!"/>
+    <meta name="keywords" content="Contact, information, phone, number, email, twitter, linkedin"/>
+    <!--External Stylesheet-->
+    <link href="Styles/CustomBubba'sGrooming.css" rel="stylesheet" />
+    <style>
+        #contactinformation {
+            background-color: gainsboro;
+            color: black;
+            font-family: 'Chilanka', cursive;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <header id="bubbasgrooming">
+        <h1 id="title"><i class="fa fa-paw"></i>Bubba's Grooming</h1>
+        <h2 id="groom">Learn how to groom your pet today!</h2>
+
+        <nav class="navbar-default navbar-fixed-top">
+
+            <!--Hamburger Button-->
+            <a href="javascript: void(0)" class="pull-right" onclick="toggleNav()" id="menu-btn">
+                &#9776;
+            </a>
+            <!--Above we applied javascript:void(0) to keep the page from refreshing but also keeping the user on the same page.
+
+            &#9776: gives you the hamburger menu button-->
+
+
+            <ul class="topnav" id="nav-list">
+                <li>
+                    <a href="index.html">
+                        <span class="glyphicon glyphicon-home"></span> Home
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="classes.html">
+                        Classes
+                    </a>
+                </li>
+                <li>
+                    <a href="team.html">
+                        Team Members
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        BorgField Hospital
+                    </a>
+                </li>
+                <!--Navbar Dropdown-->
+                <div class="dropdown">
+                    <button class="dropbtn">Services</button>
+                    <div class="dropdown-content">
+                        <a href="#">Daycare</a>
+                        <a href="#">Training</a>
+                    </div>
+                </div>
+                <!--/Navbar dropdown-->
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="mainwrapper">
+            <article>
+                <h2>Contact Information</h2>
+                <ul id="contactinformation">
+                    <li>
+                        <a href="tel: +01-816-857-5309">816-857-5309</a>
+                    </li>
+                    <li>
+                        <a href="mailto:learning@bubbasgrooming.com" target="_blank">learning@bubbasgrooming.com</a>
+                    </li>
+                    <li>Address: 1740 W 92nd Street, Kansas City, MO 64114</li>
+                    <li>Twitter: @bubbasgrooming</li>
+                    <li>
+                        Facebook:
+                        <a href="http://facebook.com" target="_blank">www.facebook.com/learnwithbubba</a>
+                    </li>
+                    <li>
+                        LinkedIn:
+                        <a href="http://linkedin.com" target="_blank">www.linkedin.com/learnwithbubba</a>
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <footer>
+        &copy;Copyright 2019 Kaeleigh Warrick-Hansen
+    </footer>
+    <!--Toggle Hamburger Menu-->
+    <script>
+        //We are now in JS mode, within the script tags
+        function toggleNav() {
+            let navList = document.getElementById('nav-list');
+            navList.classList.toggle('expanded');
+
+            //Toggle Hamburger Menu/Close button
+            let btnMenu = document.getElementById('menu-btn');
+            if (navList.classList.contains('expanded')) {
+                btnMenu.innerHTML = "&times;";
+            }
+            else {
+                btnMenu.innerHTML = "&#9776;";
+            }
+        }
+    </script>
+</body>
+</html>

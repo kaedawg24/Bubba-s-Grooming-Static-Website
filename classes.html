@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Classes</title>
+    <meta name="description" content="These are all of the classes that we offer and their business hours."/>
+    <meta name="keywords" content="learning, classes, bathing, fur, brushing, teeth, cleaning, ears, shaving, trimming, nails, groom, pet, bubba "/>
+    <meta name="author" content="Your business here"/>
+
+    <link href="@import url('https://fonts.googleapis.com/css?family=Chilanka&display=swap');"
+   <!--External Stylesheet-->
+    <link href="Styles/CustomBubba'sGrooming.css" rel="stylesheet" />
+    <style>
+        #bathingandfurbrushing {
+            background-color: gainsboro;
+            color: #00008B;
+            border-bottom: 2px dotted white;
+            border-top: 2px dotted white;
+            font-family: 'Chilanka', cursive;
+            font-size: 1.1em;
+            
+        }
+        #cleaningteethandears {
+            background-color: gainsboro;
+            color: #00008B;
+            border-bottom: 2px dotted white;
+            border-top: 2px dotted white;
+            font-family: 'Chilanka', cursive;
+            font-size: 1.1em;
+        }
+        #trimmingnailsandshaving {
+            background-color: gainsboro;
+            color: #00008B;
+            border-bottom: 2px dotted white;
+            border-top: 2px dotted white;
+            font-family: 'Chilanka', cursive;
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <header id="bubbasgrooming">
+        <h1 id="title"><i class="fa fa-paw"></i>Bubba's Grooming</h1>
+        <h2 id="groom">Learn how to groom your pet today!</h2>
+
+        <nav class="navbar-default navbar-fixed-top">
+
+            <!--Hamburger Button-->
+            <a href="javascript: void(0)" class="pull-right" onclick="toggleNav()" id="menu-btn">
+                &#9776;
+            </a>
+            <!--Above we applied javascript:void(0) to keep the page from refreshing but also keeping the user on the same page.
+
+            &#9776: gives you the hamburger menu button-->
+
+
+            <ul class="topnav" id="nav-list">
+                <li>
+                    <a href="index.html">
+                        <span class="glyphicon glyphicon-home"></span> Home
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="classes.html">
+                        Classes
+                    </a>
+                </li>
+                <li>
+                    <a href="team.html">
+                        Team Members
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        BorgField Hospital
+                    </a>
+                </li>
+                <!--Navbar Dropdown-->
+                <div class="dropdown">
+                    <button class="dropbtn">Services</button>
+                    <div class="dropdown-content">
+                        <a href="#">Daycare</a>
+                        <a href="#">Training</a>
+                    </div>
+                </div>
+                <!--/Navbar dropdown-->
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- ADD NAVBAR-->
+
+    <main>
+        <section class="mainwrapper">
+            <article>
+                <h2>Beginner - $25.00/class</h2>
+                <h3>Bathing & Fur Brushing</h3>
+                <dl id="bathingandfurbrushing">
+                    <dt>Mondays-Tuesdays</dt>
+                    <dd>9:00am-11:00am</dd>
+                    <dd>1:00pm-3:00pm</dd>
+                </dl>
+                <h2>Intermediate - $50.00/class</h2>
+                <h3>Cleaning Teeth & Ears</h3>
+                <dl id="cleaningteethandears">
+                    <dt>Wednesdays-Thursdays</dt>
+                    <dd>9:00am-11:00am</dd>
+                    <dd>1:00pm-3:00pm</dd>
+                </dl>
+                <h2>Advanced - $75.00/class</h2>
+                <h3>Trimming Nails & Shaving(trimming) Fur</h3>
+                <dl id="trimmingnailsandshaving">
+                    <dt>Fridays-Saturdays</dt>
+                    <dd>9:00am-11:00am</dd>
+                    <dd>1:00pm-3:00pm</dd>
+                </dl>
+            </article>
+        </section>
+    </main>
+    <footer>
+        &copy;Copyright 2019 Kaeleigh Warrick-Hansen
+    </footer>
+    <!--Toggle Hamburger Menu-->
+    <script>
+        //We are now in JS mode, within the script tags
+        function toggleNav() {
+            let navList = document.getElementById('nav-list');
+            navList.classList.toggle('expanded');
+
+            //Toggle Hamburger Menu/Close button
+            let btnMenu = document.getElementById('menu-btn');
+            if (navList.classList.contains('expanded')) {
+                btnMenu.innerHTML = "&times;";
+            }
+            else {
+                btnMenu.innerHTML = "&#9776;";
+            }
+        }
+    </script>
+</body>
+</html>

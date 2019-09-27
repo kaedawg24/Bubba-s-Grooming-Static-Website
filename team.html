@@ -1,0 +1,140 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Bubba's Team</title>
+    <meta name="description" content="Our company offers 4 teams per store to help ensure that the customers are satisfied. We have listed their ranking and how many positions there are per team." />
+    <meta name="keywords" content="team, technical, instructor, sales, operations, staff, directors, bubba, support" />
+    <!--External Stylesheet-->
+    <link href="Styles/CustomBubba'sGrooming.css" rel="stylesheet" />
+    <style>
+        .articleStyle {
+            font-size: 24px;
+            color: darkblue;
+        }
+        #teamFont {
+            font-family: 'Chilanka', cursive;
+            font-size: 1.1em;
+        }
+        #bubbaTeam{
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <header id="bubbasgrooming">
+        <h1 id="title"><i class="fa fa-paw"></i>Bubba's Grooming</h1>
+        <h2 id="groom">Learn how to groom your pet today!</h2>
+
+        <nav class="navbar-default navbar-fixed-top">
+
+            <!--Hamburger Button-->
+            <a href="javascript: void(0)" class="pull-right" onclick="toggleNav()" id="menu-btn">
+                &#9776;
+            </a>
+            <!--Above we applied javascript:void(0) to keep the page from refreshing but also keeping the user on the same page.
+
+            &#9776: gives you the hamburger menu button-->
+
+
+            <ul class="topnav" id="nav-list">
+                <li>
+                    <a href="index.html">
+                        <span class="glyphicon glyphicon-home"></span> Home
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="classes.html">
+                        Classes
+                    </a>
+                </li>
+                <li>
+                    <a href="team.html">
+                        Team Members
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        BorgField Hospital
+                    </a>
+                </li>
+                <!--Navbar Dropdown-->
+                <div class="dropdown">
+                    <button class="dropbtn">Services</button>
+                    <div class="dropdown-content">
+                        <a href="#">Daycare</a>
+                        <a href="#">Training</a>
+                    </div>
+                </div>
+                <!--/Navbar dropdown-->
+                <li>
+                    <a href="contact.html">
+                        Contact
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+    <main>
+        <section class="mainwrapper">
+            <article id="teamFont">
+                <h2>Bubba's Team:</h2>
+                <h3>Our team consists of 12 individuals split up into 4 teams. The positions are ranked by numbers and in parantheses, we have put how many positions of that role we have per team.</h3>
+                <ul id="bubbaTeam">
+                    <li>
+                        El Donkey Silencers (Technical Instructors)
+                        <ol>
+                            <li>Technical Instructor Lead (1)</li>
+                            <li>Technical Instructors (2)</li>
+                        </ol>
+                    </li>
+                    <li>
+                        The Stampede (Sales People)
+                        <ol>
+                            <li>Sales Lead (1)</li>
+                            <li>Sales People (2)</li>
+                        </ol>
+                    </li>
+                    <li>
+                        Mighty Indigo Hyenas (Operations Staff)
+                        <ol>
+                            <li>Operations Lead (1)</li>
+                            <li>Administration and Support Staff (2)</li>
+                        </ol>
+                    </li>
+                    <li>
+                        Night Reptiles (Head of Directors)
+                        <ol>
+                            <li>Company President (1)</li>
+                            <li>Executive Leadership (2)</li>
+                        </ol>
+                    </li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <footer>
+        &copy;Copyright 2019 Kaeleigh Warrick-Hansen
+    </footer>
+    <!--Toggle Hamburger Menu-->
+    <script>
+        //We are now in JS mode, within the script tags
+        function toggleNav() {
+            let navList = document.getElementById('nav-list');
+            navList.classList.toggle('expanded');
+
+            //Toggle Hamburger Menu/Close button
+            let btnMenu = document.getElementById('menu-btn');
+            if (navList.classList.contains('expanded')) {
+                btnMenu.innerHTML = "&times;";
+            }
+            else {
+                btnMenu.innerHTML = "&#9776;";
+            }
+        }
+    </script>
+</body>
+</html>
